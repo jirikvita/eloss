@@ -89,7 +89,7 @@ def dEdX(beta, particle, material):
 
 def dEdXHeavy(beta, particle, material):
     if particle.GetName() == 'Electron' or particle.GetName() == 'Positron':
-        print 'WARNING, using Bethe-Bloch ionization losses, intended for heavy particles, for Electron or Positron, which is not applicable!'
+        print('WARNING, using Bethe-Bloch ionization losses, intended for heavy particles, for Electron or Positron, which is not applicable!')
     rho = material.GetRho()
     I = material.GetI()
     homega = material.GetHomega()
@@ -134,7 +134,7 @@ def dEdXHeavy(beta, particle, material):
 # losses for electrons!
 def dEdXMoller(beta, particle, material):
     if particle.GetName() != 'Electron':
-        print 'WARNING, using Moller ionization losses intended for Electron for particle {:} instead!'.format(particle.GetName())
+        print('WARNING, using Moller ionization losses intended for Electron for particle {:} instead!'.format(particle.GetName()))
     rho = material.GetRho()
     I = material.GetI()
     homega = material.GetHomega()
@@ -165,7 +165,7 @@ def dEdXMoller(beta, particle, material):
 # losses for positrons!
 def dEdXBhabha(beta, particle, material):
     if particle.GetName() != 'Positron':
-        print 'WARNING, using Bhabha ionization losses intended for Positron for particle {:} instead!'.format(particle.GetName())
+        print('WARNING, using Bhabha ionization losses intended for Positron for particle {:} instead!'.format(particle.GetName()))
     rho = material.GetRho()
     I = material.GetI()
     homega = material.GetHomega()
@@ -196,7 +196,7 @@ def dEdXBhabha(beta, particle, material):
 
 def GetMostProbableLoss(x, beta, particle, material):
     if particle.GetName() == 'Electron' or particle.GetName() == 'Positron':
-        print 'WARNING, using most probable ionization losses, intended for heavy particles, for Electron or Positron, which is not applicable!'
+        print('WARNING, using most probable ionization losses, intended for heavy particles, for Electron or Positron, which is not applicable!')
     rho = material.GetRho()
     I = material.GetI()
     homega = material.GetHomega()
@@ -226,7 +226,7 @@ def GetMostProbableLoss(x, beta, particle, material):
 # Landau; Claude Leroy, Pier-Georgio Rancoita
 # default parameters for copper: I=332 eV, rho=8.9 g/cm^3
 def GetMostProbableLossAlt(x, beta, particle, material, UseRelativisticDelta):
-    print 'You should not be using this function!!!'
+    print('You should not be using this function!!!')
     rho = material.GetRho()
     A = material.GetA()
     Z = material.GetZ()

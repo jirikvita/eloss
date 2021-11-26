@@ -5,13 +5,13 @@
 from Bethe import *
 from Brems import *
 
-print '*** Supported particles:'
+print('*** Supported particles:')
 PrintParticles()
-print '*** Supported materials:'
+print('*** Supported materials:')
 PrintMaterials()
 
 
-print '***************************************************'
+print('***************************************************')
 
 pairs = [ ['Alpha', 'Si'],
           ['Deuteron', 'Si'],
@@ -48,9 +48,9 @@ for pair in pairs:
         bg = beta*gamma
         p = bg*M
         
-    print '*** Particle: {:} in {:} '.format(particle.GetName(), material.GetName())
+    print('*** Particle: {:} in {:} '.format(particle.GetName(), material.GetName()))
     # print bg, beta, gamma
-    print '    p={:3.1f}, beta={:1.4f}, gamma = {:3.3f}'.format(p, beta,gamma,)
-    print '    Ionization losses : {:1.3f} MeV/cm'.format(dEdX(beta, particle, material), )
+    print('    p={:3.1f}, beta={:1.4f}, gamma = {:3.3f}'.format(p, beta,gamma,))
+    print('    Ionization losses : {:1.3f} MeV/cm'.format(dEdX(beta, particle, material), ))
     E = gamma*M
-    print '    Radiation losses  : {:1.3f} MeV/cm'.format( dEdXBrems(E, particle, material), )
+    print('    Radiation losses  : {:1.3f} MeV/cm'.format( dEdXBrems(E, particle, material), ))

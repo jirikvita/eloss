@@ -167,7 +167,7 @@ gCompound = [
 
 gMaterials = {}
 def MakeMaterials():
-    print 'Making elements...'
+    print('Making elements...')
     for element in gElement:
         #print 'Adding ', element
         gMaterials[element[0]] =  MyMaterial(element) 
@@ -176,4 +176,4 @@ def MakeMaterials():
 
 def PrintMaterials():
     for mat in gMaterials:
-        print mat
+        print(mat)

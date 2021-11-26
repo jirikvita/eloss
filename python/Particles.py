@@ -32,10 +32,10 @@ Particles = [ [ 938.2721, +1, 'Proton', 'p', 'p'],
 ]
 
 def MakeParticles():
-    print 'Making particles...'
+    print('Making particles...')
     for particle in Particles:
         gParticles[particle[2]] = (MyParticle(particle[0], particle[1], particle[2], particle[3], particle[4]))
 
 def PrintParticles():
     for part in gParticles:
-        print part
+        print(part)

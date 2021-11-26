@@ -103,8 +103,8 @@ step = (gmax-gmin)/nsteps
 gammas = [ gmin + n*step for n in range(0, nsteps) ] 
 
 
-print betas[:20]
-print gammas[:20]
+print(betas[:20])
+print(gammas[:20])
 
 for i in range(0,len(betas)):
     beta = betas[i]

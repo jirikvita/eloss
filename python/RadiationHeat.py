@@ -39,6 +39,6 @@ E = Ealfa * ke # Jouls
 # power
 P = E * N * dconst # Watts
 
-print('Material: {}'.format(name))
-print('Power for a sphere of radius {} cm: {:4.2f} W'.format(R,P))
-print('Power/gram: {:1.4} W/g'.format(P/m))
+print(('Material: {}'.format(name)))
+print(('Power for a sphere of radius {} cm: {:4.2f} W'.format(R,P)))
+print(('Power/gram: {:1.4} W/g'.format(P/m)))
