@@ -9,10 +9,16 @@
 
 from math import *
 from ROOT import *
+
+# gInterpreter.AddIncludePath('../../myStatsToys/pyDefaults/')
+
+
 from myAll import *
 
 from Bethe import *
 betaMin = 0.05
+
+gInterpreter.AddIncludePath('../../myStatsToys/pyDefaults/')
 
 #############################################################
 
