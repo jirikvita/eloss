@@ -160,6 +160,8 @@ gCompound = [
 ['Tissue, soft (ICRP, four-comp.)',   -1,  0.550, 74.9, 1.00, 21.37, 0.238, 2.791, 0.096, 3.437, -1],
 ['Tissue-equiv. gas, (methane base)', -1,  0.550, 61.2, 1.06e-3, 0.70, 1.644, 4.140, 0.099, 3.471, -1],
 ['Tissue-equiv. gas, (propane base)', -1,  0.550, 59.5, 1.83e-3, 0.91, 1.514, 3.992, 0.098, 3.516, -1],
+#    https://physics.nist.gov/cgi-bin/Star/compos.pl?matno=226#:~:text=Mean%20Excitation%20Energy%20(eV)%20%3D,68.700000
+['Polystyrene',                       -1,  0.53768, 68.7, 1.06, 0., 0, 0, 0, 0]
 
 ]
 

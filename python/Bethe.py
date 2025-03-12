@@ -109,7 +109,8 @@ def dEdXHeavy(beta, particle, material):
     beta2 = beta*beta
     Tmax = GetTmax(beta,particle.GetM())
     delta = GetDelta(beta, gamma, material)
-    dedx = rho*K*pow(particle.GetZ(),2)*material.GetZoverA()*1./beta2 * ( 0.5*log(2.*me*beta2*gamma2*Tmax/(I*I)) - beta2 - delta/2. )
+    halflog = 0.5*log(2.*me*beta2*gamma2*Tmax/(I*I)) 
+    dedx = rho*K*pow(particle.GetZ(),2)*material.GetZoverA()*1./beta2 * ( halflog - beta2 - delta/2. )
 
     if interpolateToZero:
         # linear:
@@ -127,7 +128,7 @@ def dEdXHeavy(beta, particle, material):
     #print '   dedx              : ', dedx
 
     # returns energy loss in MeV/cm:
-    return dedx
+    return dedx, halflog
 
 
 #############################################################
